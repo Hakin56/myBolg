@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+		<meta charset="utf-8">
+		<meta name="Title" content="Hakin's Blog">
+		<meta name="Keywords" content="Hakin, Blog, donge">
+		<title>Hakin's Blog</title>
+		<link rel="stylesheet" href="css/default.min.css">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" media="screen" />
+	</head>
+	<body>
+		<header>
+			<h3><img src="images/toptop.jpg"></h3>
+			<div class="top-nav">
+				<a href="index.html" class="selected">首页</a>
+				<a href="tags.html">归档</a>
+				<a href="about.html">关于</a>
+				<a href="liuyan.html">留言</a>
+			</div>
+			<div class="hid_btn">
+				<img src="images/xxx.jpg">
+			</div>
+			<nav class="ff_nav">
+				<div class="img-a">
+					<img src="images/my-self.png">
+					<h4>Hakin's Blog</h4>
+				</div>
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="tags.html">归档</a></li>
+					<li><a href="about.html">关于</a></li>
+					<li><a href="liuyan.html">留言</a></li>
+				</ul>
+			</nav>
+			<div class="side_tas"></div>
+		</header>
+		<div class="container">
+			<div class="img-loca">
+				<img src="images/45.jpg">
+			</div>
+			<article class="artcc" id="wenzhang">
+				<div class="list">
+					<div>
+						<section class="wz-content"  v-for="todo in itemList">
+							<h2>
+								<a v-on:click="toURL('id', todo.id)">{{todo.title}}</a>
+							</h2>
+							<span class="wz-date">{{todo.date}}</span>
+							<div v-html="todo.description"></div>
+							<div class="info">
+								<span>分类:<a v-on:click="toURL('type', todo.type)">{{disType(todo.type)}}</a></span>
+								<span class="tags-ha" v-html="disKeyword(todo.keyword)"></span>
+							</div>
+						</section>
+					</div>
+					<div class="fenye" v-html="disPage()" id="pageInfo"></div>
+				</div>
+				<aside class="right-as">
+					<div class="tags">
+						<h2 class="called">标签</h2>
+						<div class="tags-cnt tags-ha">
+							<p>
+								<span v-for="(key, index) in biaoqian[0]">
+									<a v-on:click="toURL('keyword', index)" v-bind:class="'cl' + index">{{'#' + key}}</a>
+								</span>
+							</p>
+						</div>
+					</div>
+					<div class="lei">
+						<h2 class="called">分类</h2>
+						<div class="lei-cnt"  v-for="(type,index) in types[0]">
+							<p><a v-on:click="toURL('type', index)">{{type}}</a></p>
+						</div>
+					</div>
+					<div class="lei">
+						<h2 class="called">友情链接</h2>
+						<div class="lei-cnt">
+							<a href="#">暂无</a>
+						</div>
+					</div>
+				</aside>
+			</article>
+		</div>
+		<footer>
+			<div class="foot-info">
+				<span>Powerd by Hakin's Blog</span><br>
+				<span>总访问量&nbsp;<span id="visited"></span></span><br>
+			</div>
+			<div class="foot-copy">
+				Copyright &copy; 2017 Hakin
+			</div>
+		</footer>
+		<div class="to_top">⇧</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+	<script type="text/javascript" src="js/function.min.js"></script>
+	<script type="text/javascript" src="js/ajax.min.js"></script>
+
+</html>

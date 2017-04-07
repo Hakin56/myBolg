@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+		<meta charset="utf-8">
+		<title>关于我</title>
+		<link rel="stylesheet" href="css/default.min.css">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" media="screen" />
+	</head>
+	<body>
+		<header>
+			<h3><img src="images/toptop.jpg"></h3>
+			<div class="top-nav">
+				<a href="index.html">首页</a>
+				<a href="tags.html">归档</a>
+				<a href="about.html" class="selected">关于</a>
+				<a href="liuyan.html">留言</a>
+			</div>
+			<div class="hid_btn">
+				<img src="images/xxx.jpg">
+			</div>
+			<nav class="ff_nav">
+				<div class="img-a">
+					<img src="images/my-self.png">
+					<h4>Hakin's Blog</h4>
+				</div>
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="tags.html">归档</a></li>
+					<li><a href="about.html">关于</a></li>
+					<li><a href="liuyan.html">留言</a></li>
+				</ul>
+			</nav>
+			<div class="side_tas"></div>
+		</header>
+		<div class="container">
+			<div class="img-loca">
+				<img src="images/56.jpg">
+			</div>
+			<article class="artcc">
+				<div class="list">
+					<div class="about-info">
+						<h2 class="called">About</h2>
+						<span class="self-img">
+							<img src="images/my-self.png">
+						</span>
+						<div class="self-info">
+							<p>Name : <span>刘泽东（ Donge ）</span></p>
+							<p>Email : <span>21648824@qq.com</span></p>
+							<p>Weibo : <span>Donge</span></p>
+							<p>Github : <span>Haimeiyou</span></p>
+						</div>
+					</div>
+					<div class="my-view">
+						<h2 class="called">Other</h2>
+						<div class="view-content">
+							<p>我是一个菜鸟前端</p>
+							<p>我不是一个喜欢安逸的人，在我的世界里，充满了各种挑战。当然，更多的时候是自己给自己找挑战！只有这样，才能永远的战斗下去！</p>
+							<p>人生的路很长，也很短。年轻的我也许不知其中的滋味。但我知道，做人要懂得感恩，懂得回报。在我失落的时候，有人安慰我。在我虚度光阴的时候，有人提醒我。在我不知所措的时候，有人指引我。是因为有你们，我才有努力的动力！</p>
+							<p>谢谢那些在我成长道路上帮助过我的人！</p>
+							<p>5&&6!哈哈！</p>
+						</div>
+					</div>
+				</div>
+				<aside class="right-as" id="wenzhang">
+					<div class="tags">
+						<h2 class="called">标签</h2>
+						<div class="tags-cnt tags-ha">
+							<p>
+								<span v-for="(key, index) in biaoqian[0]">
+									<a v-on:click="toURL('keyword', index)" v-bind:class="'cl' + index">{{'#' + key}}</a>
+								</span>
+							</p>
+						</div>
+					</div>
+					<div class="lei">
+						<h2 class="called">分类</h2>
+						<div class="lei-cnt"  v-for="(type,index) in types[0]">
+							<p><a v-on:click="toURL('type', index)">{{type}}</a></p>
+						</div>
+					</div>
+					<div class="lei">
+						<h2 class="called">友情链接</h2>
+						<div class="lei-cnt">
+							<a href="#">暂无</a>
+						</div>
+					</div>
+				</aside>
+			</article>
+		</div>
+		<footer>
+			<div class="foot-info">
+				<span>Powerd by Hakin's Blog</span><br>
+				<span>总访问量&nbsp;<span id="visited"></span></span><br>
+			</div>
+			<div class="foot-copy">
+				Copyright &copy; 2017 Hakin
+			</div>
+		</footer>
+		<div class="to_top">⇧</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+	<script type="text/javascript" src="js/function.min.js"></script>
+	<script type="text/javascript" src="js/liuyan.js"></script>
+</html>

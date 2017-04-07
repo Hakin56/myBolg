@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+		<meta charset="utf-8">
+		<title>Donge's Blog</title>
+		<link rel="stylesheet" href="css/default.min.css">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" media="screen" />
+	</head>
+	<body>
+		<header>
+			<h3><img src="images/toptop.jpg"></h3>
+			<div class="top-nav">
+				<a href="index.html">首页</a>
+				<a href="tags.html">归档</a>
+				<a href="about.html">关于</a>
+				<a href="liuyan.html">留言</a>
+			</div>
+			<div class="hid_btn">
+				<img src="images/xxx.jpg">
+			</div>
+			<nav class="ff_nav">
+				<div class="img-a">
+					<img src="images/my-self.png">
+					<h4>Hakin's Blog</h4>
+				</div>
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="tags.html">归档</a></li>
+					<li><a href="about.html">关于</a></li>
+					<li><a href="liuyan.html">留言</a></li>
+				</ul>
+			</nav>
+			<div class="side_tas"></div>
+		</header>
+		<div class="container">
+			<div class="img-loca">
+				<img src="images/12.jpg">
+			</div>
+			<article class="artcc" id="wenzhang">
+				<div class="list">
+					<div class="t-arti">
+						<h2>{{article[0].title}}<h2>
+						<span class="wz-date">{{article[0].date}}</span>
+						<h3 v-if="article[0].keyword && article[0].type">
+							<span>
+								分类:
+								<a v-on:click="toURL('type', article[0].type)">
+									{{disType(article[0].type)}}
+								</a>
+							</span>
+							<span>标签:&nbsp;</span><label class="tags-ha" v-for="keyid in article[0].keyword.split(',')">
+								<a v-on:click="toURL('keyword', keyid)" v-bind:class="'cl' + keyid">
+									{{'#' + biaoqian[0][keyid]}}
+								</a>
+							</label>
+						</h3>
+						<p v-html="article[0].content"></p>
+					</div>
+					<div class="tags-list">
+						<div class="ds-thread" v-bind:data-thread-key="article[0].id" v-bind:data-title="article[0].title" data-url=""></div>
+					</div>
+				</div>
+				<aside class="right-as">
+					<div class="tags">
+						<h2 class="called">标签</h2>
+						<div class="tags-cnt tags-ha">
+							<p>
+								<span v-for="(key, index) in biaoqian[0]">
+									<a v-on:click="toURL('keyword', index)" v-bind:class="'cl' + index">{{'#' + key}}</a>
+								</span>
+							</p>
+						</div>
+					</div>
+					<div class="lei">
+						<h2 class="called">分类</h2>
+						<div class="lei-cnt"  v-for="(type,index) in types[0]">
+							<p><a v-on:click="toURL('type', index)">{{type}}</a></p>
+						</div>
+					</div>
+					<div class="lei">
+						<h2 class="called">友情链接</h2>
+						<div class="lei-cnt">
+							<a href="#">暂无</a>
+						</div>
+					</div>
+				</aside>
+			</article>
+		</div>
+		<footer>
+			<div class="foot-info">
+				<span>Powerd by Hakin's Blog</span><br>
+				<span>总访问量<span id="visited"></span></span><br>
+			</div>
+			<div class="foot-copy">
+				Copyright &copy; 2017 Hakin
+			</div>
+		</footer>
+		<div class="to_top">⇧</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+	<script type="text/javascript" src="js/function.min.js"></script>
+	<script type="text/javascript" src="js/article.min.js"></script>
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"liuzd"};
+		(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';ds.async = true;
+			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0]
+			 || document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+	</script>
+
+	<!-- 多说公共JS代码 end -->
+
+</html>

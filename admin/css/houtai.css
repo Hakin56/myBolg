@@ -1,0 +1,246 @@
+@media screen and ( max-width: 600px ) {
+	.container {
+		width: 300px !important;
+		margin-left:-150px !important;
+	}
+	.blog-info {
+		width: 100% !important;
+		height: 220px !important;
+	}
+	.blog-nav {
+		width: 100% !important;
+	}
+}
+@media screen and ( max-width: 799px ) and ( min-width: 601px ) {
+
+}
+@media screen and ( min-width: 800px ) {
+
+}
+
+
+* {
+	padding: 0;
+	margin: 0;
+}
+.tian {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+body {
+	 width:100%;
+	 height:100%;
+}
+.container {
+	width: 400px;
+	background: snow;
+	height: 340px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-200px;
+	margin-top:-170px;
+	text-align: center;
+	border-radius: 10px;
+	background: #e2f9dc;
+}
+.image-1 {
+	padding: 20px 0 20px 0;
+}
+.image-1 img {
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+}
+.container input {
+	width: 200px;
+	height: 30px;
+	padding-left: 20px;
+	border-radius: 5px;
+	outline: none;
+	border: 1px red solid;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+.container button {
+	width: 200px;
+	height: 30px;
+	border: none;
+	border-radius: 5px;
+	background: #ff8740;
+	margin-bottom: 20px;
+	font-size: 18px;
+	color: snow;
+	cursor: pointer;
+	outline: none;
+}
+.container button:hover {
+	background: #ee6819;
+}
+header {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px black solid;
+	position: fixed;
+	font-size: 18px;
+	background: #f0f0f0;
+	top: 0;
+}
+.div-zuo {
+	float: left;
+	padding-left: 5%;
+	height: 50px;
+}
+.div-zuo span {
+	position: absolute;
+	top: 15px;
+	display: block;
+	text-decoration: none;
+	color: black;
+	width: 110px;
+	height: 30px;
+	background: #f0f0f0;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 30px;
+}
+.div-zuo span:hover {
+	background: #e7e7e7;
+}
+.div-zuo img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	padding: 5px;
+	margin-left: 110px;
+}
+.div-you {
+	float: right;
+	padding-right: 5%;
+}
+.div-you a{
+	display: block;
+	margin-top: 15px;
+	text-decoration: none;
+	color: black;
+	width: 85px;
+	height: 30px;
+	background: #f0f0f0;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 30px;
+}
+.div-you a:hover {
+	background: #e7e7e7;
+}
+.main-area {
+	width: 95%;
+	margin: 50px auto 0;
+}
+.main-area h2 {
+	padding-left: 5px;
+	border-left: 2px #4365c9 solid;
+}
+.blog-info {
+	background: #f0f0f0;
+	border-radius: 5px;
+	width: 55%;
+	height: 180px;
+	float: left;
+	margin-top: 10px;
+}
+.blog-aarr span {
+	padding-left: 20px;
+	line-height: 30px;
+}
+.blog-aarr {
+	padding: 10px;
+	height: 300px;
+}
+.blog-nav {
+	background: #f0f0f0;
+	border-radius: 5px;
+	width: 43%;
+	height: 300px;
+	float: right;
+	margin-top: 10px;
+}
+.unnormal {
+	margin-top: 14px;
+}
+.blog-aarr a {
+	display: block;
+	height: 30px;
+	text-decoration: none;
+	background: #da8a51;
+	line-height: 30px;
+	border-radius: 5px;
+	width: 200px;
+	margin: auto;
+	text-align: center;
+	color: snow;
+	font-weight: bold;
+}
+.blog-aarr a:hover {
+	background: #d67129;
+}
+.write-wen {
+	width: 80%;
+	margin: 68px auto;
+}
+.write-wen h2 {
+	font-size: 20px;
+	margin-left: -5px;
+}
+.write-wen form {
+	margin: 10px 0;
+}
+.write-wen form input {
+	height: 26px;
+	width: 260px;
+	outline: none;
+	padding-left: 10px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	border: 1px solid #a8a8a8;
+	font-size: 16px;
+}
+.write-wen form button {
+	width: 120px;
+	height: 35px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	background: #da8a51;
+	color: snow;
+	font-weight: bold;
+	font-size: 18px;
+	cursor: pointer;
+}
+.write-wen form button:hover {
+	background: #d67129;
+}
+.type-sel {
+	width: 271px;
+	height: 30px;
+	border-radius: 5px;
+	outline: none;
+	font-size: 16px;
+	padding-left: 8px;
+}
+.check-box {
+	padding: 10px 0;
+}
+.run{
+	width:100%;
+	margin-bottom:20px;
+	border-bottom:1px #000 outset;
+}
+.run a{
+	color:#000;
+	text-decoration:none;
+}
